@@ -1,1 +1,2 @@
-# MyBlog
+# Blog of Richard Annowit
+
