@@ -14,21 +14,29 @@
 
         <div class="row no-gutters block-9">
           <div class="col-md-12 order-md-last d-flex">
-            <form action="#" class="bg-light p-4 p-md-5 contact-form">
+            <form action="/post/store" method="POST" enctype="multipart/form-data" class="bg-light p-4 p-md-5 contact-form">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name">
+                <input type="text" class="form-control" name="title" placeholder="Title">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Email">
+                <label>Choose Category:</label>
+                <select id="category" name="category">
+                  
+                  <% for(var i=0; i<cat.length; i++){ %>
+                    <option value="<%= cat[i]._id%>"><%= cat[i].name%></option>
+                  <%}%>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <textarea id="" cols="30" rows="7" name="content" class="form-control" placeholder="Content"></textarea>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject">
+                <label>Background of post: </label>
+                <input type="file" name="background" id="background" class="form-control"/>
               </div>
               <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
-              </div>
-              <div class="form-group">
-                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                <input type="submit" value="Send Post" class="btn btn-primary py-3 px-5">
               </div>
             </form>
           

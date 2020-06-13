@@ -1,3 +1,7 @@
+const CategoryPost = require('../models/CategoryPost');
+
 module.exports = (req,res)=>{
-	res.render('createPost');
+	CategoryPost.find({},(err,cat)=>{
+		res.render('createPost',{cat: cat});
+	})
 }

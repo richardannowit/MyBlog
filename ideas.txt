@@ -1,0 +1,14 @@
+Xây dựng database post:
+	+ Tiêu đề bài viết
+	+ Ảnh nền bài viết
+	+ Lựa chọn dùng ảnh nền hoặc ảnh riêng làm ảnh giới thiệu
+	+ Nội dung bài viết
+	+ Chủ đề bài viết
+	+ Author
+	+ Số bình luận
+	+ Ngày tháng tạo bài
+Xây dựng database category:
+	+ id
+	+ id loại
+	+ Tên loại
+
